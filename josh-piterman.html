@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Josh Piterman Online Meet & Greet Hosted by Stagedoor </title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" type="image/x-icon" href="https://stagedoorapp.com/images/favicon.ico" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" type="text/css" href="style.css?v=3">
+</head>
+
+<body class="josh-piterman">
+  <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
+
+  <h1>Online Meet & Greet w/ Josh Piterman</h1>
+  <h2>Tuesday 24 November @ 18:30 (GMT)</h2>
+
+  <article class="container">
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <div>
+      <button id="checkout-button-sku_IPD7N10KWB6k7Q" role="link">Reserve your seat</button>
+      <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
+    </div>
+    <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
+
+    <p id="error-message"></p>
+  </article>
+
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_IPD7N10KWB6k7Q');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IPD7N10KWB6k7Q', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>

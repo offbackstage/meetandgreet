@@ -1,2 +1,2 @@
-# meetandgreet
-Transferred from stagedoor/meetandgreet
+# https://meet.stagedoorapp.com
+Mini-website for Meet & Greet online with actors

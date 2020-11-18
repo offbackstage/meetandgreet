@@ -1,0 +1,150 @@
+body {
+  background: #111 no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Avenir Next", Helvetica, sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  padding-top: 10%;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+body.josh-piterman {
+  background-image: url('josh-piterman.jpg');
+  background-position: 50% 50%;
+}
+body.cassidy-janson {
+  background-image: url('cassidy-janson.jpg');
+  background-position: 50% 50%;
+}
+body.karl-queensborough {
+  background-image: url('karl-queensborough.jpg');
+  background-position: 50% 50%;
+}
+body.killian-donnelly {
+  background-image: url('killian-donnelly.jpg');
+  background-position: 50% 50%;
+}
+body.michael-jibson {
+  background-image: url('michael-jibson.jpg');
+  background-position: 50% 50%;
+}
+body.olivia-moore {
+  background-image: url('olivia-moore.jpg');
+  background-position: 50% 50%;
+}
+body.leslie-garcia {
+  background-image: url('leslie-garcia.jpg');
+  background-position: 50% 50%;
+}
+body.jordan-luke {
+  background-image: url('jordan-luke.jpg');
+  background-position: 50% 50%;
+}
+body.jodie-steele {
+  background-image: url('jodie-steele.jpg');
+  background-position: 50% 50%;
+}
+body.leanne-robinson {
+  background-image: url('leanne-robinson.jpg');
+  background-position: 50% 50%;
+}
+body.courtney-bowman {
+  background-image: url('courtney-bowman.jpg');
+  background-position: 50% 50%;
+}
+body.emma-hatton {
+  background-image: url('emma-hatton.jpg');
+  background-position: 50% 80%;
+}
+body.layton-williams {
+  background-image: url('layton-williams.jpg');
+  background-position: 50% 50%;
+}
+body.danielle-steers {
+  background-image: url('danielle-steers.jpg');
+  background-position: 40% 50%;
+}
+body.grace-mouat {
+  background-image: url('grace-mouat.jpg');
+  background-position: 50% 50%;
+}
+body.natalie-paris {
+  background-image: url('natalie-paris.jpg');
+  background-position: 50% 50%;
+}
+body.hiba-elchikhe {
+  background-image: url('hiba-elchikhe.jpg');
+  background-position: 50% 80%;
+}
+body.luke-bayer {
+  background-image: url('luke-bayer.jpg');
+  background-position: 0% 50%;
+}
+body:after {
+  content: "";
+  background: #111;
+  opacity: .5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+a {
+  color: #eb1234;
+}
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+button {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 700;
+  border: solid transparent 4px;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+  border-radius: 100px;
+  background: #eb1234;
+  color: #fff;
+  padding: 10px;
+  width: 90%;
+  min-width: 200px;
+  outline: none;
+  transition: all .3s;
+}
+button:hover {
+  border-color: #eb1234;
+  color: #eb1234;
+  background: none;
+}
+div {
+  background: rgba(0,0,0,.8);
+  border-radius: 40px;
+  padding: 20px;
+  margin: 3em 0;
+}
+h1 {
+  font-size: 40px;
+  width: 60%;
+  min-width: 300px;
+  margin: 0 auto;
+}
+h1,
+h2 {
+  text-shadow: 5px 10px 20px rgba(0,0,0,.7);
+}
+small {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  color: #bbb;
+  font-weight: 600;
+}
