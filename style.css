@@ -12,6 +12,10 @@ body {
   margin: 0 auto;
 }
 
+body.rachel-john {
+  background-image: url('rachel-john.jpg');
+  background-position: 50% 50%;
+}
 body.josh-piterman {
   background-image: url('josh-piterman.jpg');
   background-position: 50% 50%;
