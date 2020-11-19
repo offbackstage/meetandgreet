@@ -12,6 +12,10 @@ body {
   margin: 0 auto;
 }
 
+body.kelsey-ellison {
+  background-image: url('kelsey-ellison.jpg');
+  background-position: 50% 50%;
+}
 body.rachel-john {
   background-image: url('rachel-john.jpg');
   background-position: 50% 50%;
