@@ -123,11 +123,28 @@ button {
   min-width: 200px;
   outline: none;
   transition: all .3s;
+  position: relative;
 }
-button:hover {
+button:hover:not(.soldout) {
   border-color: #eb1234;
   color: #eb1234;
   background: none;
+}
+button.soldout {
+  background: rgba(235, 18, 52, .4);
+  color: #777;
+  cursor: not-allowed;
+}
+button.soldout:before {
+  content: 'Sold Out';
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  position: absolute;
+  transform: rotate(-20deg);
+  left: -5%;
+  top: -2%;
 }
 div {
   background: rgba(0,0,0,.8);
