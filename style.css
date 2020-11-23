@@ -12,8 +12,12 @@ body {
   margin: 0 auto;
 }
 
-body.amber-doing-thorne {
-  background-image: url('amber-doing-thorne.jpg');
+body.alicia-corrales-connor {
+  background-image: url('alicia-corrales-connor.jpg');
+  background-position: 50% 50%;
+}
+body.kelsey-ellison {
+  background-image: url('kelsey-ellison.jpg');
   background-position: 50% 50%;
 }
 body.rachel-john {
@@ -167,7 +171,7 @@ h2 {
   text-shadow: 5px 10px 20px rgba(0,0,0,.7);
 }
 small {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: block;
   color: #bbb;
