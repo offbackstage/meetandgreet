@@ -20,6 +20,10 @@ body.kelsey-ellison {
   background-image: url('kelsey-ellison.jpg');
   background-position: 50% 50%;
 }
+body.amber-doin-thorne {
+  background-image: url('amber-doin-thorne.jpg');
+  background-position: 50% 50%;
+}
 body.rachel-john {
   background-image: url('rachel-john.jpg');
   background-position: 50% 50%;
@@ -121,7 +125,7 @@ button {
   font-weight: 700;
   border: solid transparent 4px;
   display: block;
-  margin: 20px auto;
+  margin: 30px auto;
   cursor: pointer;
   border-radius: 100px;
   background: #eb1234;
@@ -157,7 +161,7 @@ button.soldout:before {
 div {
   background: rgba(0,0,0,.8);
   border-radius: 40px;
-  padding: 20px;
+  padding: 30px;
   margin: 3em 0;
 }
 h1 {
@@ -170,8 +174,11 @@ h1,
 h2 {
   text-shadow: 5px 10px 20px rgba(0,0,0,.7);
 }
+small+button {
+  margin-top: 5px;
+}
 small {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   display: block;
   color: #bbb;
