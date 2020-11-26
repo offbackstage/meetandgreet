@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.kelly-downing {
+  background-image: url('kelly-downing.jpg');
+  background-position: 50% 50%;
+}
 body.caroline-kay {
   background-image: url('caroline-kay.jpg');
   background-position: 50% 50%;
