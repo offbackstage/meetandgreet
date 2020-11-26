@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.caroline-kay {
+  background-image: url('caroline-kay.jpg');
+  background-position: 50% 50%;
+}
 body.jason-pennycooke {
   background-image: url('jason-pennycooke.jpg');
   background-position: 50% 50%;
