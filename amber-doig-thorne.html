@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Amber Doig-Thorne Online Meet & Greet Hosted by Stagedoor </title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" type="image/x-icon" href="https://stagedoorapp.com/images/favicon.ico" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" type="text/css" href="style.css?v=3">
+</head>
+
+<body class="amber-doig-thorne">
+  <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
+
+  <h1>Online Meet & Greet w/ Amber Doig-Thorne</h1>
+  <h2>Friday 27 November @ 18:30 (GMT)</h2>
+
+  <article class="container">
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <div>
+      <small>1. Meet Amber + Ask her a question + Download the full video recording (only 10 available)</small>
+      <button id="checkout-button-sku_IRaZCPc4XF6MBD" role="link">Select seat - £15.99</button>
+      <small>2. Meet Amber + Ask her a question</small>
+      <button id="checkout-button-sku_IRaYfbJLuuqSVD" role="link">Select seat - £11.99</button>
+      <small>3. Watch the exclusive Meet & Greet</small>
+      <button id="checkout-button-sku_IRaXUJWJy8hkYU" role="link">Select seat - £7.99</button>
+      <br/><small>🔒 You will be taken to a secure payment website powered by Stripe</small>
+    </div>
+    <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
+
+    <p id="error-message"></p>
+  </article>
+
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_IRaXUJWJy8hkYU');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IRaXUJWJy8hkYU', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+
+    var checkoutButton1 = document.getElementById('checkout-button-sku_IRaYfbJLuuqSVD');
+    checkoutButton1.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IRaYfbJLuuqSVD', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+
+    var checkoutButton2 = document.getElementById('checkout-button-sku_IRaZCPc4XF6MBD');
+    checkoutButton2.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IRaZCPc4XF6MBD', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>
