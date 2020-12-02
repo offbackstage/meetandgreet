@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.blake-patrick {
+  background-image: url('blake-patrick.jpg');
+  background-position: 50% 50%;
+}
 body.alistair-brammer {
   background-image: url('alistair-brammer.jpg');
   background-position: 50% 50%;
