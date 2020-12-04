@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.tarinn-callender {
+  background-image: url('tarinn-callender.jpg');
+  background-position: 50% 50%;
+}
 body.blake-patrick {
   background-image: url('blake-patrick.jpg');
   background-position: 50% 50%;
