@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -13,14 +12,17 @@
   <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
 
   <h1>Online Meet & Greet w/ Karl Queensborough</h1>
-  <h2>Friday 13 November @ 18:30 (GMT)</h2>
+  <h2>Saturday 12 December @ 18:30 (GMT)</h2>
 
   <article class="container">
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3"></script>
 
     <div>
-      <button id="checkout-button-sku_IMh6gH5Uwpi4Jx" role="link">Reserve your seat</button>
+      <small>1. Meet Karl + Ask him a question + Get the full video recording (only 10 available)</small>
+      <button id="checkout-button-sku_IXCaolxCHaELer" role="link">Select seat - £15.99</button>
+      <small>2. Meet Karl + Ask him a question</small>
+      <button id="checkout-button-sku_IXCaLX1C2hdMep" role="link">Select seat - £11.99</button>
       <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
     </div>
     <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
@@ -33,10 +35,32 @@
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_IMh6gH5Uwpi4Jx');
+    var checkoutButton = document.getElementById('checkout-button-sku_IXCaolxCHaELer');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_IMh6gH5Uwpi4Jx', quantity: 1}],
+        items: [{sku: 'sku_IXCaolxCHaELer', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_IXCaLX1C2hdMep');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IXCaLX1C2hdMep', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
