@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.kelly-mathieson {
+  background-image: url('kelly-mathieson.jpg');
+  background-position: 50% 50%;
+}
+body.tshan-williams {
+  background-image: url('tshan-williams.jpg');
+  background-position: 50% 50%;
+}
 body.hana-stewart {
   background-image: url('hana-stewart.jpg');
   background-position: 50% 50%;
