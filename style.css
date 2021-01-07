@@ -11,6 +11,18 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.maiya-quansah-breed {
+  background-image: url('maiya-quansah-breed.jpg');
+  background-position: 50% 50%;
+}
+body.sophie-evans {
+  background-image: url('sophie-evans.jpg');
+  background-position: 50% 50%;
+}
+body.sophie-isaacs {
+  background-image: url('sophie-isaacs.jpg');
+  background-position: 50% 50%;
+}
 body.kelly-mathieson {
   background-image: url('kelly-mathieson.jpg');
   background-position: 50% 50%;
