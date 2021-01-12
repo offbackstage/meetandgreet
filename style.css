@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.omar-lye-fook {
+  background-image: url('omar-lye-fook.jpg');
+  background-position: 50% 50%;
+}
+body.sophie-burrell {
+  background-image: url('sophie-burrell.jpg');
+  background-position: 50% 50%;
+}
 body.maiya-quansah-breed {
   background-image: url('maiya-quansah-breed.jpg');
   background-position: 50% 50%;
