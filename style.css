@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.maddie-bulleyment {
+  background-image: url('maddie-bulleyment.jpg');
+  background-position: 50% 50%;
+}
 body.omar-lye-fook {
   background-image: url('omar-lye-fook.jpg');
   background-position: 50% 50%;
