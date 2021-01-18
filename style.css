@@ -11,8 +11,8 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
-body.virtual-extravaganza {
-  background-image: url('virtual-extravaganza.jpg');
+body.virtual-extravaganza-upgrade-1 {
+  background-image: url('virtual-extravaganza-upgrade-1.jpg');
   background-position: 50% 50%;
 }
 body.maddie-bulleyment {
