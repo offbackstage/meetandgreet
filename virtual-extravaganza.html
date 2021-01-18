@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Virtual Extravaganza - Upgrade Ticket</title>
+  <title>Virtual Extravaganza</title>
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" type="image/x-icon" href="https://stagedoorapp.com/images/favicon.ico" />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="stylesheet" type="text/css" href="style.css?v=2">
 </head>
 
-<body class="virtual-extravaganza">
+<body class="virtual-extravaganza-da1">
   <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
 
   <h1>Virtual Extravaganza: 30-31 January</h1>
-  <h2>Upgrade to the full weekend for just £20 more.</h2>
+  <h2>Join us on one of the days - or for the full weekend extravaganza!</h2>
 
   <article class="container">
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3"></script>
 
     <div>
-      <button id="checkout-button-sku_IljbCK6OvTysTz" role="link">Upgrade for £20</button>
+      <small>Book Saturday 30 Jan only</small>
+      <button id="checkout-button-sku_ImY8t1bhCiDpnE" role="link">Book Saturday - £30</button>
+      <small>Book Sunday 31 Jan only</small>
+      <button id="checkout-button-sku_ImYAFTz56KBOFj" role="link">Book Sunday - £30</button>
+      <small>Book the full weekend</small>
+      <button id="checkout-button-sku_ImYBQj1Ma74Jzc" role="link">Book full weekend - £50</button>
       <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
     </div>
     <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
@@ -33,10 +38,54 @@
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_IljbCK6OvTysTz');
+    var checkoutButton = document.getElementById('checkout-button-sku_ImY8t1bhCiDpnE');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_IljbCK6OvTysTz', quantity: 1}],
+        items: [{sku: 'sku_ImY8t1bhCiDpnE', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_ImYAFTz56KBOFj');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_ImYAFTz56KBOFj', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_ImYBQj1Ma74Jzc');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_ImYBQj1Ma74Jzc', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',

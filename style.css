@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.virtual-extravaganza {
+  background-image: url('virtual-extravaganza.jpg');
+  background-position: 50% 50%;
+}
 body.virtual-extravaganza-da1 {
   background-image: url('virtual-extravaganza-da1.jpg');
   background-position: 50% 50%;
