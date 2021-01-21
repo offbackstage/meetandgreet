@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Omar Lye-Fook Online Meet & Greet Hosted by Stagedoor </title>
+  <title>Charlotte Jaconelli Online Meet & Greet Hosted by Stagedoor </title>
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" type="image/x-icon" href="https://stagedoorapp.com/images/favicon.ico" />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body class="omar-lye-fook">
+<body class="charlotte-jaconelli">
   <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
 
-  <h1>Online Meet & Greet w/ Omar Lye-Fook</h1>
-  <h2>Saturday 6 February @ 12:00 (GMT)</h2>
+  <h1>Online Meet & Greet w/ Charlotte Jaconelli</h1>
+  <h2>Wednesday 27 January @ 18:30 (GMT)</h2>
 
   <article class="container">
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3"></script>
 
     <div>
-      <small>1. Meet Omar + Ask him a question + Get the full video recording (only 10 available)</small>
-      <button id="checkout-button-sku_IkIpDpBVSOXYKA" role="link">Select seat - £15.99</button>
-      <small>2. Meet Omar + Ask him a question</small>
-      <button id="checkout-button-sku_IkIqEF58E7RF5J" role="link">Select seat - £11.99</button>
+      <small>1. Meet Charlotte + Ask her a question + Get the full video recording (only 10 available)</small>
+      <button id="checkout-button-sku_IngaZ5kl57i9il" role="link">Select seat - £15.99</button>
+      <small>2. Meet Charlotte + Ask her a question</small>
+      <button id="checkout-button-sku_IngdY3d6cEfmwM" role="link">Select seat - £11.99</button>
       <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
     </div>
     <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
@@ -36,10 +36,10 @@
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_IkIpDpBVSOXYKA');
+    var checkoutButton = document.getElementById('checkout-button-sku_IngaZ5kl57i9il');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_IkIpDpBVSOXYKA', quantity: 1}],
+        items: [{sku: 'sku_IngaZ5kl57i9il', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
@@ -58,10 +58,10 @@
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_IkIqEF58E7RF5J');
+    var checkoutButton = document.getElementById('checkout-button-sku_IngdY3d6cEfmwM');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_IkIqEF58E7RF5J', quantity: 1}],
+        items: [{sku: 'sku_IngdY3d6cEfmwM', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
