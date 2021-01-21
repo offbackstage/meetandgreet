@@ -11,6 +11,22 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.charlotte-jaconelli {
+  background-image: url('charlotte-jaconelli.jpg');
+  background-position: 50% 50%;
+}
+body.jade-davies {
+  background-image: url('jade-davies.jpg');
+  background-position: 50% 50%;
+}
+body.lucy-anderson {
+  background-image: url('lucy-anderson.jpg');
+  background-position: 50% 50%;
+}
+body.lawrence-walker {
+  background-image: url('lawrence-walker.jpg');
+  background-position: 50% 50%;
+}
 body.paul-ettore-tabone-britt-lenting {
   background-image: url('paul-ettore-tabone-britt-lenting.jpg');
   background-position: 50% 50%;
