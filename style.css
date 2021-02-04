@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.grace-mouat-2 {
+  background-image: url('grace-mouat-2.jpg');
+  background-position: 50% 50%;
+}
 body.laura-baldwin {
   background-image: url('laura-baldwin.jpg');
   background-position: 50% 50%;

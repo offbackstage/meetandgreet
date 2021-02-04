@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Online Workshop w/ Maiya Quansah-Breed Hosted by Stagedoor </title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" type="image/x-icon" href="https://stagedoorapp.com/images/favicon.ico" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="maiya-quansah-breed">
+  <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
+
+  <h1>'Acting through Song' Online Workshop w/ Maiya Quansah-Breed</h1>
+  <h2>Thursday 11 February @ 18:30 (GMT)</h2>
+
+  <article class="container">
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <div>
+      <small>1. Participate in the workshop + Get the full video recording (only 10 available)</small>
+      <button id="checkout-button-sku_IsvvP696uo0lzS" role="link">Select seat - £17.99</button>
+      <small>2. Participate in the workshop</small>
+      <button id="checkout-button-sku_IsvxHHmVRPHe7K" role="link">Select seat - £13.99</button>
+      <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
+    </div>
+    <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
+
+    <p id="error-message"></p>
+  </article>
+
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_IsvvP696uo0lzS');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IsvvP696uo0lzS', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_IsvxHHmVRPHe7K');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IsvxHHmVRPHe7K', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>
