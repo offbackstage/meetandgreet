@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Get the Virtual Extravaganza video recording </title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" type="image/x-icon" href="https://stagedoorapp.com/images/favicon.ico" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" type="text/css" href="style.css?v=3">
+</head>
+
+<body class="download-video">
+  <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
+
+  <h1>Get the Virtual Extravaganza video recordings</h1>
+  <h2>PROS from the SHOWS x Stagedoor</h2>
+
+  <article class="container">
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <div>
+      <small>Get the Saturday recording</small>
+      <button id="checkout-button-sku_IuLfdc6Mvknc7s" role="link">Saturday video - £3.99</button>
+      <small>Get the Sunday recording</small>
+      <button id="checkout-button-sku_IuLfinqCNgJhcj" role="link">Sunday video - £3.99</button>
+      <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
+    </div>
+    <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
+
+    <p id="error-message"></p>
+  </article>
+
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_IuLfdc6Mvknc7s');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IuLfdc6Mvknc7s', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_IuLfinqCNgJhcj');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IuLfinqCNgJhcj', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>
