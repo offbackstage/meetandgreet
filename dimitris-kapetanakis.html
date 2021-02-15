@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dimitris Kapetanakis Online Meet & Greet Hosted by OFFBACKSTAGE </title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" type="image/x-icon" href="https://offbackstage.com/images/logo-square--white.svg" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="dimitris-kapetanakis">
+  <p><img src="https://offbackstage.com/images/logo-square--white.svg" width="80" alt="OFFBACKSTAGE logo" /></p><br/>
+
+  <h1>Online Meet & Greet w/ Dimitris Kapetanakis</h1>
+  <h2>Tuesday 23 February @ 18:30 (GMT)</h2>
+
+  <article class="container">
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <div>
+      <small>1. Meet Dimitris + Ask him a question + Get the full video recording (only 10 available)</small>
+      <button id="checkout-button-sku_Ix4RcA4RPAgYd7" role="link">Select seat - £15.99</button>
+      <small>2. Meet Dimitris + Ask him a question</small>
+      <button id="checkout-button-sku_Ix4SQxcjXKE1np" role="link">Select seat - £11.99</button>
+      <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
+    </div>
+    <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
+
+    <p id="error-message"></p>
+  </article>
+
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_Ix4RcA4RPAgYd7');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_Ix4RcA4RPAgYd7', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success-ob',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled-ob',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_Ix4SQxcjXKE1np');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_Ix4SQxcjXKE1np', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success-ob',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled-ob',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>

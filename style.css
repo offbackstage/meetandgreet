@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.dimitris-kapetanakis {
+  background-image: url('dimitris-kapetanakis.jpg');
+  background-position: 50% 50%;
+}
+body.miltos-yerolemou {
+  background-image: url('miltos-yerolemou.jpg');
+  background-position: 50% 50%;
+}
 body.courtney-stapleton {
   background-image: url('courtney-stapleton.jpg');
   background-position: 50% 50%;
