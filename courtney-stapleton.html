@@ -20,10 +20,13 @@
     <script src="https://js.stripe.com/v3"></script>
 
     <div>
-      <small>1. Meet Courtney + Ask her a question + Get the full video recording (only 10 available)</small>
-      <button id="checkout-button-sku_IvutM70Vd2gHTS" role="link">Select seat - £15.99</button>
-      <small>2. Meet Courtney + Ask her a question</small>
-      <button id="checkout-button-sku_IvuuRSAbHVxdtj" role="link">Select seat - £11.99</button>
+      <h3>Select Package:</h3>
+      <small>Package 1: Meet Courtney + Ask a question during Q&A</small>
+      <button id="checkout-button-sku_IvuuRSAbHVxdtj" role="link">Book seat £11.99</button>
+      <small>Package 2: Meet Courtney + Ask a question during Q&A + Video recording of the full experience (only 10 available)</small>
+      <button id="checkout-button-sku_IvutM70Vd2gHTS" role="link">Book seat £15.99</button>
+       <small>Package 3: 10 minutes personal 1-on-1 Meet & Greet with Courtney + Join group session + Video recording of the full experience </small>
+      <button id="checkout-button-sku_IxiE0PHbpqiPxr" role="link">Book seat £19.99</button>
       <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
     </div>
     <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
@@ -62,6 +65,28 @@
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
         items: [{sku: 'sku_IvuuRSAbHVxdtj', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_IxiE0PHbpqiPxr');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IxiE0PHbpqiPxr', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',

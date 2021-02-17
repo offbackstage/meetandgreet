@@ -321,6 +321,10 @@ h1,
 h2 {
   text-shadow: 5px 10px 20px rgba(0,0,0,.7);
 }
+h3 {
+font-size: 22px;
+font-weight: 700;
+}
 small+button {
   margin-top: 5px;
 }
