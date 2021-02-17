@@ -322,8 +322,18 @@ h2 {
   text-shadow: 5px 10px 20px rgba(0,0,0,.7);
 }
 h3 {
-font-size: 22px;
-font-weight: 700;
+ font-size: 22px;
+ font-weight: 700;
+}
+h4 {
+  width: 90%;
+  font-size: 17px;
+  font-weight: 100px;
+  margin: 0 auto;
+  display: block;
+  color: #bbb;
+  text-align: left
+
 }
 small+button {
   margin-top: 5px;
@@ -336,6 +346,6 @@ small {
   font-weight: 600;
 }
 ul li {
- padding: 0 0 4px 5px;
+ padding: 0 0 2px 2px;
  text-align: left;
 }
