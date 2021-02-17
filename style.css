@@ -335,3 +335,7 @@ small {
   color: #bbb;
   font-weight: 600;
 }
+ul li {
+ padding: 0 0 4px 5px;
+ text-align: left;
+}
