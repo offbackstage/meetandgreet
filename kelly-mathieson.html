@@ -13,17 +13,37 @@
   <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
 
   <h1>Online Meet & Greet w/ Kelly Mathieson</h1>
-  <h2>Thursday 7 January @ 18:30 (GMT)</h2>
+  <h2>Thursday 4 March @ 18:30 (GMT)</h2>
 
   <article class="container">
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3"></script>
 
     <div>
-      <small>1. Meet Kelly + Ask her a question + Get the full video recording (only 10 available)</small>
-      <button id="checkout-button-sku_IYFySPujObWnaq" role="link">Select seat - £15.99</button>
-      <small>2. Meet Kelly + Ask her a question</small>
-      <button id="checkout-button-sku_IYFxJd5GCLrbjq" role="link">Select seat - £11.99</button>
+      <h3>Select Package:</h3>
+      <h4>Bronze Package</h4>
+      <small>
+        <ul>
+          <li>Meet Kelly</li>
+          <li>Ask a question during Q&A</li>
+        </ul></small>
+      <button id="checkout-button-sku_IYFxJd5GCLrbjq" role="link">Book Bronze £13.99</button>
+      <h4>Silver Package (limited to 10)</h4>
+      <small>
+        <ul>
+          <li>Meet Kelly</li>
+          <li>Ask a question during Q&A</li>
+          <li>Video recording of the full experience</li>
+        </ul></small>
+      <button id="checkout-button-sku_IYFySPujObWnaq" role="link">Book Silver £17.99</button>
+       <h4>Gold Package (limited to 5)</h4>
+       <small>
+        <ul>
+          <li>10 minutes personal 1-on-1 Meet & Greet with Kelly</li>
+          <li>Group Meet & Greet</li>
+          <li>Video recording of the full experience</li>
+        </ul></small>
+      <button id="checkout-button-sku_J18WHAsvsuPNLT" role="link">Book Gold  £39.99</button>
       <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
     </div>
     <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
@@ -31,6 +51,28 @@
     <p id="error-message"></p>
   </article>
 
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_IYFxJd5GCLrbjq');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_IYFxJd5GCLrbjq', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
 
   <script>
   (function() {
@@ -54,14 +96,14 @@
   })();
   </script>
 
-  <script>
+<script>
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_IYFxJd5GCLrbjq');
+    var checkoutButton = document.getElementById('checkout-button-sku_J18WHAsvsuPNLT');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_IYFxJd5GCLrbjq', quantity: 1}],
+        items: [{sku: 'sku_J18WHAsvsuPNLT', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
