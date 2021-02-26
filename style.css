@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.tom-mcgovern {
+  background-image: url('tom-mcgovern.jpg');
+  background-position: 50% 50%;
+}
+body.devora-wilde {
+  background-image: url('devora-wilde.jpg');
+  background-position: 50% 50%;
+}
 body.dimitris-kapetanakis {
   background-image: url('dimitris-kapetanakis.jpg');
   background-position: 50% 50%;
