@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.heather-shaw {
+  background-image: url('heather-shaw.jpg');
+  background-position: 50% 50%;
+}
+body.bonavega {
+  background-image: url('bonavega.jpg');
+  background-position: 50% 50%;
+}
 body.tom-mcgovern {
   background-image: url('tom-mcgovern.jpg');
   background-position: 50% 50%;
