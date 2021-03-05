@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.ryan-stasik {
+  background-image: url('ryan-stasik.jpg');
+  background-position: 50% 50%;
+}
 body.heather-shaw {
   background-image: url('heather-shaw.jpg');
   background-position: 50% 50%;
