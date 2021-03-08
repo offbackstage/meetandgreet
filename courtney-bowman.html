@@ -12,15 +12,16 @@
 <body class="courtney-bowman">
   <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
 
-  <h1>Online Meet & Greet w/ Courtney Bowman</h1>
-  <h2>Saturday 21 November @ 18:30 (GMT)</h2>
+  <h1>Online 1-on-1 Meet & Greet w/ Courtney Bowman</h1>
+  <h2>Monday 15 March @ 18:30 - 20:30 (GMT)</h2>
 
   <article class="container">
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3"></script>
 
     <div>
-      <button id="checkout-button-sku_IFZRP97Uxj49Sa" role="link">Reserve your seat</button>
+      <h3>10-minute 1-on-1 session with Courtney + The video recording of the full experience</h3>
+      <button id="checkout-button-sku_J4w8J4d2WVI9Y9" role="link">Book seat £34.99</button>
       <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
     </div>
     <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
@@ -33,10 +34,10 @@
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_IFZRP97Uxj49Sa');
+    var checkoutButton = document.getElementById('checkout-button-sku_J4w8J4d2WVI9Y9');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_IFZRP97Uxj49Sa', quantity: 1}],
+        items: [{sku: 'sku_J4w8J4d2WVI9Y9', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
