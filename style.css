@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.lucie-jones {
+  background-image: url('lucie-jones.jpg');
+  background-position: 50% 50%;
+}
 body.montell-jordan {
   background-image: url('montell-jordan.jpg');
   background-position: 50% 50%;
