@@ -11,6 +11,18 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.ellyn-marsh {
+  background-image: url('ellyn-marsh.jpg');
+  background-position: 50% 50%;
+}
+body.fizaa-dosani {
+  background-image: url('fizaa-dosani.jpg');
+  background-position: 50% 50%;
+}
+body.ben-crawford {
+  background-image: url('ben-crawford.jpg');
+  background-position: 50% 50%;
+}
 body.lucie-jones {
   background-image: url('lucie-jones.jpg');
   background-position: 50% 50%;
