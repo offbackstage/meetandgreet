@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Jonathan Roxmouth Online Meet & Greet Hosted by Stagedoor </title>
+  <title>Jonathan Roxmouth Online 1-on-1 Meet & Greet Hosted by Stagedoor </title>
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" type="image/x-icon" href="https://stagedoorapp.com/images/favicon.ico" />
   <meta name="robots" content="noindex, nofollow" />
@@ -12,38 +12,16 @@
 <body class="jonathan-roxmouth">
   <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
 
-  <h1>Online Meet & Greet w/ Jonathan Roxmouth</h1>
-  <h2>Sunday 28 February @ 12:00PM (GMT)</h2>
+  <h1>Online 1-on-1 Meet & Greet w/ Jonathan Roxmouth</h1>
+  <h2>Tuesday 30 March @ 13:00 - 15:00 (GMT)</h2>
 
   <article class="container">
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3"></script>
 
     <div>
-      <h3>Select Package:</h3>
-      <h4>Bronze Package</h4>
-      <small>
-        <ul>
-          <li>Meet Jonathan</li>
-          <li>Ask a question during Q&A</li>
-        </ul></small>
-      <button class="soldout">Bronze £11.99</button>
-      <h4>Silver Package (limited to 10)</h4>
-      <small>
-        <ul>
-          <li>Meet Jonathan</li>
-          <li>Ask a question during Q&A</li>
-          <li>Video recording of the full experience</li>
-        </ul></small>
-      <button class="soldout">Silver £15.99</button>
-       <h4>Gold Package (limited to 5)</h4>
-       <small>
-        <ul>
-          <li>10 minutes personal 1-on-1 Meet & Greet with Jonathan</li>
-          <li>Group Meet & Greet</li>
-          <li>Video recording of the full experience</li>
-        </ul></small>
-      <button class="soldout">Gold  £19.99</button>
+      <h3>10-minute 1-on-1 session with Jonathan + The video recording of the experience (Limited to 10)</h3>
+      <button id="checkout-button-sku_JBHcZNtjKttcFC" role="link">Book seat £37.99</button>
       <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
     </div>
     <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
@@ -56,10 +34,10 @@
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_Ip9tQevkfEqFpp');
+    var checkoutButton = document.getElementById('checkout-button-sku_JBHcZNtjKttcFC');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_Ip9tQevkfEqFpp', quantity: 1}],
+        items: [{sku: 'sku_JBHcZNtjKttcFC', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
@@ -74,49 +52,6 @@
   })();
   </script>
 
-  <script>
-  (function() {
-    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
-
-    var checkoutButton = document.getElementById('checkout-button-sku_Ip9ujhyrWmhx72');
-    checkoutButton.addEventListener('click', function () {
-      stripe.redirectToCheckout({
-        items: [{sku: 'sku_Ip9ujhyrWmhx72', quantity: 1}],
-        mode: 'payment',
-        successUrl: 'https://meet.stagedoorapp.com/success',
-        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
-      })
-      .then(function (result) {
-        if (result.error) {
-          var displayError = document.getElementById('error-message');
-          displayError.textContent = result.error.message;
-        }
-      });
-    });
-  })();
-  </script>
-
-  <script>
-  (function() {
-    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
-
-    var checkoutButton = document.getElementById('checkout-button-sku_IyAliuefcvO7iZ');
-    checkoutButton.addEventListener('click', function () {
-      stripe.redirectToCheckout({
-        items: [{sku: 'sku_IyAliuefcvO7iZ', quantity: 1}],
-        mode: 'payment',
-        successUrl: 'https://meet.stagedoorapp.com/success',
-        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
-      })
-      .then(function (result) {
-        if (result.error) {
-          var displayError = document.getElementById('error-message');
-          displayError.textContent = result.error.message;
-        }
-      });
-    });
-  })();
-  </script>
 
 </body>
 </html>
