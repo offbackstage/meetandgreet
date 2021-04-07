@@ -34,10 +34,10 @@
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_IUrSvOFktYwfaa');
+    var checkoutButton = document.getElementById('checkout-button-sku_JG44v98EoNoe0w');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_IUrSvOFktYwfaa', quantity: 1}],
+        items: [{sku: 'sku_JG44v98EoNoe0w', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
