@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.lauren-drew {
+  background-image: url('lauren-drew.jpg');
+  background-position: 50% 50%;
+}
+body.rick-rowley {
+  background-image: url('rick-rowley.jpg');
+  background-position: 50% 50%;
+}
 body.ellyn-marsh {
   background-image: url('ellyn-marsh.jpg');
   background-position: 50% 50%;

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rick Rowley Online Meet & Greet Hosted by OFFBACKSTAGE </title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" type="image/x-icon" href="https://join.offbackstage.com/images/logo-square--white.svg" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="rick-rowley">
+  <p><img src="https://join.offbackstage.com/images/logo-square--white.svg" width="80" alt="OFFBACKSTAGE logo" /></p><br/>
+
+  <h1>Online Meet & Greet w/ Rick Rowley</h1>
+  <h2>Saturday 17 April @ 14:00 (EST)</h2>
+
+  <article class="container">
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <div>
+     <h3>Select Package:</h3>
+      <h4>Package 1 (limited to 10)</h4>
+      <small>
+        <ul>
+          <li>Meet Rick</li>
+          <li>Ask a question during Q&A</li>
+          <li>Video recording of the full experience</li>
+        </ul></small>
+      <button id="checkout-button-sku_JI1GanA9EzQVtd" role="link">Book seat $18.99</button>
+     <h4> Package 2</h4>   
+         <small>
+        <ul>
+          <li>Meet Rick</li>
+          <li>Ask a question during Q&A</li>
+        </ul></small>
+      <button id="checkout-button-sku_JI1FclY1SyZXzs" role="link">Book seat $14.99</button>
+      <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
+    </div>
+    <small>If you have any questions, please <a href="mailto:help@offbackstage.com">email us</a></small>
+
+    <p id="error-message"></p>
+  </article>
+
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_JI1GanA9EzQVtd');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_JI1GanA9EzQVtd', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success-ob',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled-ob',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_JI1FclY1SyZXzs');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_JI1FclY1SyZXzs', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success-ob',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled-ob',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>
