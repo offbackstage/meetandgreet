@@ -20,8 +20,10 @@
     <script src="https://js.stripe.com/v3"></script>
 
     <div>
+      <h2>Save £10 on the last available seats:</h2>
+      <h3><strike>From £29.99</strike> Now £19.99</h3>
       <h3>10-minute 1-on-1 session with Cassidy + The video recording of the experience (Limited to 10)</h3>
-      <button id="checkout-button-sku_JG74QLInO3UZbm" role="link">Book seat £29.99</button>
+      <button id="checkout-button-sku_JI1xTkjEec0p9K" role="link">Book seat £19.99</button>
       <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
     </div>
     <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
@@ -34,10 +36,10 @@
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_JG74QLInO3UZbm');
+    var checkoutButton = document.getElementById('checkout-button-sku_JI1xTkjEec0p9K');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_JG74QLInO3UZbm', quantity: 1}],
+        items: [{sku: 'sku_JI1xTkjEec0p9K', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
