@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.natalya-platonova {
+  background-image: url('natalya-platonova.jpg');
+  background-position: 50% 50%;
+}
 body.lauren-drew {
   background-image: url('lauren-drew.jpg');
   background-position: 50% 50%;
