@@ -13,7 +13,7 @@
   <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
 
   <h1>Online 1-on-1 Meet & Greet w/ Lucie Jones</h1>
-  <h2>Wednesday 7 April @ 18:30 - 20:30 (BST)</h2>
+  <h2>Wednesday 21 April @ 18:30 - 20:30 (BST)</h2>
 
   <article class="container">
     <!-- Load Stripe.js on your website. -->
@@ -21,7 +21,7 @@
 
     <div>
       <h3>10-minute 1-on-1 session with Lucy + The video recording of the experience (Limited to 10)</h3>
-      <button id="checkout-button-sku_JDUlKaflpoEln7" role="link">Book seat £37.99</button>
+      <button id="checkout-button-sku_JI1QjSHigFdOfS" role="link">Book seat £37.99</button>
       <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
     </div>
     <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
@@ -34,10 +34,10 @@
   (function() {
     var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
 
-    var checkoutButton = document.getElementById('checkout-button-sku_JDUlKaflpoEln7');
+    var checkoutButton = document.getElementById('checkout-button-sku_JI1QjSHigFdOfS');
     checkoutButton.addEventListener('click', function () {
       stripe.redirectToCheckout({
-        items: [{sku: 'sku_JDUlKaflpoEln7', quantity: 1}],
+        items: [{sku: 'sku_JI1QjSHigFdOfS', quantity: 1}],
         mode: 'payment',
         successUrl: 'https://meet.stagedoorapp.com/success',
         cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
