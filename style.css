@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.scott-paige {
+  background-image: url('scott-paige.jpg');
+  background-position: 50% 50%;
+}
+body.george-porlemad {
+  background-image: url('george-porlemad.jpg');
+  background-position: 50% 50%;
+}
 body.natalya-platonova {
   background-image: url('natalya-platonova.jpg');
   background-position: 50% 50%;
