@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pre-show Online Meet & Greet w/ Alice Fearn</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" type="image/x-icon" href="https://stagedoorapp.com/images/favicon.ico" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" type="text/css" href="style.css?v=2">
+</head>
+
+<body class="alice-fearn">
+  <p><img src="https://stagedoorapp.com/img/logo-text.svg" width="200" alt="stagedoor logo" /></p><br/>
+
+  <h1>Pre-show Online Meet & Greet w/ Alice Fearn: Fri 21 May @ 18:30</h1>
+  <h2>Save 23% with a strictly limited Gold Package for an Online Meet & Greet with Alice and a Premium Ticket to Intermissions LIVE!</h2>
+
+  <article class="container">
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <div>
+      <h3>Select Package (only 25 seats available):</h3>
+      <h4>Gold Package</h4>
+      <small>
+        <ul>
+          <li>Online Q&A with Alice</li>
+          <li>Video recording of the full experience</li>
+          <li>Premium seat for Intermissions LIVE</li>
+        </ul></small>
+      <button id="checkout-button-sku_JLgEQVeoMw6WGi" role="link">Book Gold £39.99</button>
+      <h4>Silver Package</h4>
+      <small>
+        <ul>
+          <li>Online Q&A with Alice</li>
+          <li>Premium seat for Intermissions LIVE</li>
+        </ul></small>
+      <button id="checkout-button-sku_JLgFxQCLYHUPXc" role="link">Book Silver £34.99</button>
+       <h4>Bronze Package</h4>
+       <small>
+        <ul>
+          <li>Online Q&A with Alice</li>
+        </ul></small>
+      <button id="checkout-button-sku_JLgGat8AA25j7Z" role="link">Book Bronze £16.99</button>
+      <small>🔒 You will be taken to a secure payment website powered by Stripe</small>
+
+    </div>
+    <small>If you have any questions, please <a href="mailto:support@stagedoorapp.com">email us</a></small>
+
+    <p id="error-message"></p>
+  </article>
+
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_JLgEQVeoMw6WGi');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_JLgEQVeoMw6WGi', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_JLgFxQCLYHUPXc');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_JLgFxQCLYHUPXc', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_Ml2e49nUuoHtv42COHswdtV4007d6nTr2Y');
+
+    var checkoutButton = document.getElementById('checkout-button-sku_JLgGat8AA25j7Z');
+    checkoutButton.addEventListener('click', function () {
+      stripe.redirectToCheckout({
+        items: [{sku: 'sku_JLgGat8AA25j7Z', quantity: 1}],
+        mode: 'payment',
+        successUrl: 'https://meet.stagedoorapp.com/success',
+        cancelUrl: 'https://meet.stagedoorapp.com/cancelled',
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>

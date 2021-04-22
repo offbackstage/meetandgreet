@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.alice-fearn {
+  background-image: url('alice-fearn.jpg');
+  background-position: 50% 50%;
+}
 body.scott-paige {
   background-image: url('scott-paige.jpg');
   background-position: 50% 50%;
