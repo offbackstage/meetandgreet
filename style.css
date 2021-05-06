@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.christin-neddens {
+  background-image: url('christin-neddens.jpg');
+  background-position: 50% 50%;
+}
+body.raven-screams {
+  background-image: url('raven-screams.jpg');
+  background-position: 50% 50%;
+}
 body.alice-fearn {
   background-image: url('alice-fearn.jpg');
   background-position: 50% 50%;
