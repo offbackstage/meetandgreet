@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.leyan-senay {
+  background-image: url('leyan-senay.jpg');
+  background-position: 50% 50%;
+}
+body.daisy-pepper {
+  background-image: url('daisy-pepper.jpg');
+  background-position: 50% 50%;
+}
 body.christin-neddens {
   background-image: url('christin-neddens.jpg');
   background-position: 50% 50%;
