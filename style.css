@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.ada-reaper {
+  background-image: url('ada-reaper.jpg');
+  background-position: 50% 50%;
+}
 body.leyan-senay {
   background-image: url('leyan-senay.jpg');
   background-position: 50% 50%;
