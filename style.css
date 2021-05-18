@@ -11,6 +11,26 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.jj-niemann {
+  background-image: url('jj-niemann.jpg');
+  background-position: 50% 50%;
+}
+body.kerry-ellis {
+  background-image: url('kerry-ellis.jpg');
+  background-position: 50% 50%;
+}
+body.booka-nile {
+  background-image: url('booka-nile.jpg');
+  background-position: 50% 50%;
+}
+body.georgina-castle {
+  background-image: url('georgina-castle.jpg');
+  background-position: 50% 50%;
+}
+body.nkenge {
+  background-image: url('nkenge.jpg');
+  background-position: 50% 50%;
+}
 body.bryce-ruthven {
   background-image: url('bryce-ruthven.jpg');
   background-position: 50% 50%;
