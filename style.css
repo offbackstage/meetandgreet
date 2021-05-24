@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.bonavega-1 {
+  background-image: url('bonavega-1.jpg');
+  background-position: 50% 50%;
+}
 body.jj-niemann {
   background-image: url('jj-niemann.jpg');
   background-position: 50% 50%;
