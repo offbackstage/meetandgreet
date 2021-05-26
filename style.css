@@ -11,6 +11,14 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.vithun-illankovan {
+  background-image: url('vithun-illankovan.jpg');
+  background-position: 50% 50%;
+}
+body.patrick-ralphson {
+  background-image: url('patrick-ralphson.jpg');
+  background-position: 50% 50%;
+}
 body.bonavega-1 {
   background-image: url('bonavega-1.jpg');
   background-position: 50% 50%;
