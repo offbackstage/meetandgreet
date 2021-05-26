@@ -409,23 +409,9 @@ button:not(.paypal) {
   position: relative;
 }
 button.paypal {
-font-family: inherit;
-  font-size: 24px;
-  font-weight: 700;
-  border: solid 4px;
   border-color: #eb1234;
-  display: block;
-  margin: 30px auto;
-  cursor: pointer;
-  border-radius: 100px;
   background: none;
   color: #fff;
-  padding: 10px;
-  width: 90%;
-  min-width: 200px;
-  outline: none;
-  transition: all .3s;
-  position: relative;
 }
 button:hover:not(.soldout) {
   border-color: #eb1234;
