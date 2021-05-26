@@ -11,6 +11,10 @@ body {
   font-weight: 500;
   margin: 0 auto;
 }
+body.daisy-wood-davis {
+  background-image: url('daisy-wood-davis.jpg');
+  background-position: 50% 50%;
+}
 body.vithun-illankovan {
   background-image: url('vithun-illankovan.jpg');
   background-position: 50% 50%;
