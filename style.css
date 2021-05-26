@@ -390,7 +390,7 @@ a {
   max-width: 400px;
   margin: 0 auto;
 }
-button:not(.paypal) {
+button {
   font-family: inherit;
   font-size: 24px;
   font-weight: 700;
@@ -407,11 +407,6 @@ button:not(.paypal) {
   outline: none;
   transition: all .3s;
   position: relative;
-}
-button.paypal {
-  border-color: #eb1234;
-  background: none;
-  color: #fff;
 }
 button:hover:not(.soldout) {
   border-color: #eb1234;
